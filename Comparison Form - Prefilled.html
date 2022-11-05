@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Document</title><link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="camada_escura" class="layer_black"></div>
+    <div class="conteiner">
+        <form class="elementor-form" name="Calculo de investimento">
+            <div style="display: flex;">
+                <div id="sobre_produtos"class="bloco one-half">
+                    <h2>Sobre a sua empresa</h2>
+                    <label for="selling_price">
+                    Preço de venda dos seus produtos (Média) </label>
+                    <br>
+                    <input type="number" value="200" name="Preço de venda" id="selling_price" placeholder="Preço final de venda" class="no_blank no_zero">
+                    <br>
+                    <label for="product_cost">
+                    Custo dos seus produtos (média) </label>
+                    <br>
+                    <input type="number"  value="100" id="product_cost" placeholder="Custo médio de cada produto" required=" required" aria-required="true" class="">
+                    <br>
+                    
+                    <label for="selling_number">
+                    Número de vendas por mês (Atual) </label>
+                    <br>
+                    <input type="number"  value="50" id="selling_number" placeholder="Média atual de vendas por mês" required=" required" aria-required="true" class="no_blank no_zero" min="1">
+                    <br> 
+                    <label for="fixed_costs">
+                        Custos fixos mensais </label><br>
+                    <input type="number"  value="600" id="fixed_costs" placeholder="Custos fixos mensais da sua empresa (usado para calcular o lucro)" required=" required" aria-required="true" class="">
+                </div>
+                <div id="sobre_fotos" class="bloco one-half">
+                    <h2>Sobre as fotos</h2>
+                    <label for="product_quantity">
+                    Quantidade de produtos para fotografar </label>
+                    <br>
+                    <input type="number"  value="50" id="product_quantity" placeholder="Número de produtos que pretende fotografar" required=" required" aria-required="true" class="no_blank no_zero">
+                    <br>
+                    <label for="photos_per_product">
+                    Quantas fotos de cada produto </label>
+                    <br>
+                    <input type="number"  value="2" id="photos_per_product" placeholder="Ou seja, precisa de quantos ângulos de cada produto?" required=" required" aria-required="true" class="no_blank no_zero">
+                    <br>
+                    <div id="" class="div_dados tr1">Total de fotos:<div class="result" id="total_quantity_images"></div></div>
+                </div>
+            </div>
+            <div class="bloco" style="display:flex;">
+                <div class="one-half">
+                    <label for="months">Calcular lucro para quantos meses?</label>
+                    <input type="number"  value="12" id="months" required=" required" aria-required="true" class="no_blank no_zero" min="1">    
+                </div>
+                <div class="one-half">
+                    <div class="div_dados tr1" id="">Faturamento atual:<div class="result" id="current_revenue"></div></div>
+                    <div class="div_dados tr2" id="">Lucro atual:<div class="result" id="current_profit"></div></div>
+                </div>
+            </div>
+            <div id="costs-investings" style="display:flex">
+                <div id="results_studio_1" class="bloco  one-half results">
+                    <label for="investing_studio_1">
+                    Custo por foto (Estúdio Zarez) </label>
+                    <br>
+                    <input type="number"  value="50"  id="investing_studio_1" required=" required" aria-required="true" class="no_blank no_zero">
+                    <br>
+
+                    <label for="raise_studio_1">
+                    Aumento esperado nas vendas (em %) </label><br>
+                    <input type="number" value="10"  id="raise_studio_1" required=" required" aria-required="true" class="">
+                    <div class="subbloco full-width">
+                        <div class="div_dados tr1" id="">Investimento total:<div class="result" id="res_total_inv1"></div></div>
+                        <div class="div_dados tr2" id="">Faturamento previsto:<div class="result" id="res_revenue1"></div></div>
+                        <div class="div_dados tr1" id="">Lucro previsto:<div class="result" id="res_profit1"></div></div>
+                        <div class="div_dados tr2" id="">Aumento do lucro:<div class="result" id="res_profit_raise1"></div></div>
+                    </div>
+                </div>
+                <div id="results_studio_2" class="bloco one-half results">    
+                    <label for="investing_studio_2">
+                    Custo por foto (Outro estúdio) </label>
+                    <br>
+                    <input type="number"  value="20"  id="investing_studio_2" required=" required" aria-required="true" class="no_blank no_zero">
+                    <br>
+                    
+                    <label for="raise_studio_2">
+                    Aumento esperado nas vendas (em %) </label>
+                    <br>
+                    <input type="number"  value="5" id="raise_studio_2" required=" required" aria-required="true" class="">
+                    <div class="subbloco full-width">
+                        <div class="div_dados tr1" id="">Investimento total:<div class="result" id="res_total_inv2"></div></div>
+                        <div class="div_dados tr2" id="">Faturamento previsto:<div class="result" id="res_revenue2"></div></div>
+                        <div class="div_dados tr1" id="">Lucro previsto:<div class="result" id="res_profit2"></div></div>
+                        <div class="div_dados tr2" id="">Aumento do lucro:<div class="result" id="res_profit_raise2"></div></div>
+                    </div>
+                </div>
+            </div>
+      
+        </form>
+        <div>
+            <button onclick="Calculate()">
+                <span>
+                <span class=" elementor-button-icon">
+                </span>
+                <span class="elementor-button-text">Calcular</span>
+                </span>
+                </button>
+        </div>
+            <div id="error_message" class="none div__dados"></div>
+    </div>
+ <script type="text/javascript" src="script.js"></script>
+
+</body>
+</html>
