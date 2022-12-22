@@ -1,5 +1,5 @@
 This is my first project using Javascript. A Form that uses Javacript Vanilla and CSS to compare investments, and forecast with one is the best option.
-I`ve made it, to help clients to understand better in wich Product Photographer to invest, based on prices, profit return expectation, and time.
+I`ve made it, to help clients to understand better in which Product Photographer to invest, based on prices, profit return expectation, and time.
 
 It calculates profit raise, percentage raise, revenues and profit forecast over a period of time.
 
